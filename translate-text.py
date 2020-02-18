@@ -4,7 +4,7 @@ import requests, uuid
 api_key = '9dbcb058fe69462ba9d26b6af0965ee2'
 api_endpoint = 'https://api-eur.cognitive.microsofttranslator.com'
 path = '/translate?api-version=3.0'
-params = '&to=es&to=en&profanityAction=Marked&ProfanityMarker=Asterisk'
+params = '&to=hu&to=en&profanityAction=Marked&ProfanityMarker=Asterisk'
 constructed_url = api_endpoint + path + params
 
 headers = {
@@ -14,7 +14,7 @@ headers = {
 }
 
 body = [{
-    'text': 'Menj a fenébe!'
+    'text': 'Ich würde wirklich gern Ihr Auto um den Block fahren ein paar Mal.'
 }]
 
 request = requests.post(constructed_url, headers=headers, json=body)
