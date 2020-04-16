@@ -4,7 +4,7 @@ import requests, uuid
 api_key = '9dbcb058fe69462ba9d26b6af0965ee2'
 api_endpoint = 'https://api-eur.cognitive.microsofttranslator.com'
 path = '/translate?api-version=3.0'
-params = '&to=hu&to=en&profanityAction=Marked&ProfanityMarker=Asterisk'
+params = '&to=en&to=hu&to=sk&profanityAction=Marked&ProfanityMarker=Asterisk'
 constructed_url = api_endpoint + path + params
 
 headers = {
@@ -22,3 +22,4 @@ response = request.json()
 print(body[0].get('text'))
 print(response[0].get('translations')[0].get('text'))
 print(response[0].get('translations')[1].get('text'))
+print(response[0].get('translations')[2].get('text'))
